@@ -84,6 +84,10 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
         return false;
 
     // Check proof of work matches claimed amount
+    //
+    // Here's the code we need to change, here's my climate friendly proposal
+    // utilizing the the green HFSP consensus mechanism:
+    // https://bit.ly/3tMbLiE
     if (UintToArith256(hash) > bnTarget)
         return false;
 
